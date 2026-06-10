@@ -23,9 +23,13 @@ public class Rectangle implements Shape {
     }
 
     public static void main(String[] args) {
-        Shape s1 = new Rectangle(4, 5);
-        System.out.println(s1.area()); // 20.0
-        Shape s2 = new Circle(3);
-        System.out.println(s2.area()); // 28.27
+        try {
+            Shape s1 = new Rectangle(4, 5);
+            System.out.println(s1.area()); // 20.0
+            Shape s2 = new Circle(3);
+            System.out.println(s2.area()); // 28.27
+        }catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
