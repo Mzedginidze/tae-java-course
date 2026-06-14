@@ -11,6 +11,7 @@ public class AgeValidator {
         } else System.out.println("ok");
     }
 
+
     public static void main(String[] args) {
         try {
             validate(25);
