@@ -47,9 +47,12 @@ public class NumberStats {
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, -2, 3, 6, 5));
 
-        System.out.println("Max: " + findMax(numbers));
-        System.out.println("Min: " + findMin(numbers));
-        System.out.println("Average: " + average(numbers));
-
+        try {
+            System.out.println("Max: " + findMax(numbers));
+            System.out.println("Min: " + findMin(numbers));
+            System.out.println("Average: " + average(numbers));
+        }catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
